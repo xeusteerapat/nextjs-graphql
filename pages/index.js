@@ -19,10 +19,9 @@ export default function Home() {
       beers {
         id
         name
-        brewery_type
-        state
-        latitude
-        longitude
+        tagline
+        description
+        image_url
       }
   }`,
     fetchBeer

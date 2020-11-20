@@ -8,21 +8,11 @@ const typeDefs = gql`
   type Beer {
     id: Int
     name: String
-    brewery_type: String
-    street: String
-    address_2: String
-    address_3: String
-    city: String
-    state: String
-    county_province: String
-    postal_code: String
-    country: String
-    longitude: String
-    latitude: String
-    phone: String
-    website_url: String
-    updated_at: String
-    created_at: String
+    tagline: String
+    first_brewed: String
+    description: String
+    image_url: String
+    abv: Float
   }
 `;
 
@@ -30,7 +20,7 @@ const resolvers = {
   Query: {
     async beers(parent, args, context) {
       try {
-        const res = await axios.get('https://api.openbrewerydb.org/breweries');
+        const res = await axios.get('https://api.punkapi.com/v2/beers');
         const beer = res.data;
 
         return beer;
