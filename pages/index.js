@@ -1,6 +1,6 @@
 import useSWR from 'swr';
-import styles from '../styles/Home.module.css';
 import axios from 'axios';
+import Card from '../components/Card';
 
 const fetchBeer = async query => {
   const response = await axios({
@@ -35,7 +35,7 @@ export default function Home() {
   } = data;
 
   return (
-    <div className={styles.container}>
+    <div>
       <h1>Hello World</h1>
       <h3>List of Beers</h3>
       {beers.map(beer => (
