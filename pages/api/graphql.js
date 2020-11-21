@@ -13,12 +13,13 @@ const typeDefs = gql`
     description: String
     image_url: String
     abv: Float
+    brewers_tips: String
   }
 `;
 
 const resolvers = {
   Query: {
-    async beers(parent, args, context) {
+    async beers() {
       try {
         const res = await axios.get('https://api.punkapi.com/v2/beers');
         const beer = res.data;
