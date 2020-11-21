@@ -36,8 +36,13 @@ export default function Home() {
   } = data;
 
   return (
-    <div className='container'>
-      <h1 className='text-5xl'>Brewdog IPA</h1>
+    <div>
+      <h1
+        className='text-5xl'
+        style={{ textAlign: 'center', paddingTop: '3rem' }}
+      >
+        Brewdog IPA
+      </h1>
       {beers.map(beer => (
         <Card key={beer.id} beer={beer} />
       ))}
