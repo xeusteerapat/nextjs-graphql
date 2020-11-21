@@ -1,7 +1,6 @@
 import useSWR from 'swr';
 import axios from 'axios';
 import Card from '../components/Card';
-import Head from '../components/Head';
 
 const fetchBeer = async query => {
   const response = await axios({
@@ -37,19 +36,16 @@ export default function Home() {
   } = data;
 
   return (
-    <>
-      <Head />
-      <div>
-        <h1
-          className='text-5xl'
-          style={{ textAlign: 'center', paddingTop: '3rem' }}
-        >
-          Brewdog IPA
-        </h1>
-        {beers.map(beer => (
-          <Card key={beer.id} beer={beer} />
-        ))}
-      </div>
-    </>
+    <div>
+      <h1
+        className='text-5xl'
+        style={{ textAlign: 'center', paddingTop: '3rem' }}
+      >
+        Brewdog IPA
+      </h1>
+      {beers.map(beer => (
+        <Card key={beer.id} beer={beer} />
+      ))}
+    </div>
   );
 }
