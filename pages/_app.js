@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>My page title</title>
+        <title>PUNK IPA</title>
         <link rel='menifest' href='/site.webmanifest' />
       </Head>
       <Component {...pageProps} />
