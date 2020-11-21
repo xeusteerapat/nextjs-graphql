@@ -20,6 +20,7 @@ export default function Home() {
         id
         name
         tagline
+        abv
         description
         image_url
       }
@@ -35,11 +36,10 @@ export default function Home() {
   } = data;
 
   return (
-    <div>
-      <h1>Hello World</h1>
-      <h3>List of Beers</h3>
+    <div className='container'>
+      <h1 className='text-5xl'>Brewdog IPA</h1>
       {beers.map(beer => (
-        <ul key={beer.id}>{beer.name}</ul>
+        <Card key={beer.id} beer={beer} />
       ))}
     </div>
   );
